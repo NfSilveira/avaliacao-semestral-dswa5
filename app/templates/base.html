@@ -18,11 +18,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url_for('main.index') }}">Avaliação Contínua: <strong>Aula 080</strong></a>
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">Avaliação Semestral</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                <li><a href="{{ url_for('main.teachers_page') }}">Cadastro de Professores</a></li>
+                <li><a href="{{ url_for('main.disciplines_page') }}">Cadastro de Disciplinas</a></li>
+                <li><a href="{{ url_for('main.students_page') }}">Cadastro de Alunos</a></li>
             </ul>
         </div>
     </div>

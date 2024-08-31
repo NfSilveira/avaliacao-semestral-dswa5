@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Avaliação Semestral{% endblock %}
+
+{% block page_content %}
+{{ wtf.quick_form(form) }}
+
+<h2>Relação de Professores Cadastrados</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Professor</th>
+            <th>Disciplina</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for teacher in teachers %}
+        <tr>
+            <td>{{ teacher.teacher_name }}</td>
+            <td>{{ discipline_choices.get(teacher.discipline.name, 'Nenhuma Disciplina Atribuída') }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
